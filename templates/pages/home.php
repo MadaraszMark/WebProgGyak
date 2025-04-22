@@ -11,7 +11,7 @@
     <h3>Flotta animáció (saját videó, max 5mp)</h3>
     <video width="320" height="240" controls>
         <source src="assets/videos/intro.mp4" type="video/mp4">
-        A böngésződ nem támogatja a videó lejátszást.
+        A böngésződ nem támogatja a videó lejátszást!
     </video>
 </section>
 
