@@ -4,17 +4,24 @@
     <p>Írj nekünk, ha kérdésed van, vagy szeretnél ajánlatot kérni flottakezelésre vagy autóbérlésre!</p>
 
     <form action="index.php?page=contact" method="post" class="contact-form" data-aos="zoom-in" data-aos-delay="200">
-      <label for="name">Név</label>
-      <input type="text" id="name" name="name" required>
+      <div class="form-group">
+        <label for="name">Név</label>
+        <input type="text" id="name" name="name" placeholder="Add meg a neved" required>
+      </div>
 
-      <label for="email">Email cím</label>
-      <input type="email" id="email" name="email" required>
+      <div class="form-group">
+        <label for="email">Email cím</label>
+        <input type="email" id="email" name="email" placeholder="Add meg az email címed" required>
+      </div>
 
-      <label for="message">Üzenet</label>
-      <textarea id="message" name="message" rows="6" required></textarea>
+      <div class="form-group">
+        <label for="message">Üzenet</label>
+        <textarea id="message" name="message" rows="6" placeholder="Írd ide az üzeneted..." required></textarea>
+      </div>
 
-      <button type="submit">Üzenet küldése</button>
+      <button type="submit" class="btn">Üzenet küldése</button>
     </form>
   </div>
 </section>
+
 

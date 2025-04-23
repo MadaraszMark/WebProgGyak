@@ -275,5 +275,40 @@ tbody tr:hover {
   color: white;
 }
 
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+body.dark-mode .card,
+body.dark-mode .upload-form,
+body.dark-mode .contact-form,
+body.dark-mode .table-container,
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: #2b2b2b;
+  color: #fff;
+  border-color: #444;
+}
+
+body.dark-mode a {
+  color: #91cfff;
+}
+
+body.dark-mode .btn {
+  background-color: #6366f1;
+  color: white;
+}
+
+body.dark-mode .btn.secondary {
+  border: 2px solid #91cfff;
+  color: #91cfff;
+}
+
+body.dark-mode .btn.secondary:hover {
+  background-color: #91cfff;
+  color: #1e1e1e;
+}
+
 
 

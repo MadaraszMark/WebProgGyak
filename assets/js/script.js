@@ -1,5 +1,5 @@
 // DARK MODE TOGGLE
-const body = document.body;
+const pageBody = document.body;
 const toggle = document.createElement('button');
 toggle.innerText = "🌙";
 toggle.title = "Sötét mód";
@@ -16,8 +16,8 @@ toggle.style.cursor = "pointer";
 toggle.style.zIndex = "999";
 
 toggle.onclick = () => {
-    body.classList.toggle('dark-mode');
-    toggle.innerText = body.classList.contains('dark-mode') ? "☀️" : "🌙";
+    pageBody.classList.toggle('dark-mode');
+    toggle.innerText = pageBody.classList.contains('dark-mode') ? "☀️" : "🌙";
 };
 
 document.body.appendChild(toggle);
