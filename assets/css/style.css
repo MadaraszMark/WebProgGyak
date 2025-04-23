@@ -9,14 +9,14 @@ body {
 
 h1, h2, h3 {
   font-weight: 800;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
   color: #1a1a1a;
 }
 
 p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #444;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 /* HERO SZEKCIÓ */
@@ -86,9 +86,8 @@ p {
   50% { transform: translateY(-10px); }
 }
 
-/* SZEKCIÓK */
 .section {
-  padding: 80px 10%;
+  padding: 50px 8%; /* 80px helyett 50px */
   background-color: #fff;
 }
 
@@ -138,29 +137,46 @@ iframe {
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-/* KAPCSOLAT ŰRLAP */
 .contact-form {
   background: #fff;
   padding: 30px;
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  margin: 30px auto 0;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin-top: 30px;
+  gap: 20px;
+}
+
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: #1a1a1a;
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 12px;
+  padding: 12px 14px;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
-  resize: vertical;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff6a3d;
 }
 
 .contact-form button {
-  padding: 12px 24px;
+  padding: 14px 20px;
   background-color: #ff6a3d;
   color: #fff;
   border: none;
@@ -173,6 +189,7 @@ iframe {
 .contact-form button:hover {
   background-color: #e65727;
 }
+
 
 /* ÜZENETEK TÁBLÁZAT */
 .table-container {
@@ -310,5 +327,45 @@ body.dark-mode .btn.secondary:hover {
   color: #1e1e1e;
 }
 
+footer {
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  color: #777;
+  background-color: transparent;
+  margin-top: 30px;
+}
 
+footer hr {
+  margin-bottom: 16px;
+  border: none;
+  border-top: 1px solid #eee;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 860px; /* vagy 240px, ízlés szerint */
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.03);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 

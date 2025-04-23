@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user = $stmt->fetch();
 
     if ($user && password_verify($password, $user['password'])) {
-        // Bejelentkezés sikeres
+        // Sikeres login
         $_SESSION['user'] = [
             'id' => $user['id'],
             'last_name' => $user['last_name'],
@@ -28,20 +28,44 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<h2>Bejelentkezés</h2>
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bejelentkezés</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
 
-<?php if ($error): ?>
-    <p style="color:red;"><?= $error ?></p>
-<?php endif; ?>
+<section class="section" id="login">
+  <div class="container" style="max-width: 400px; margin: 0 auto;">
+    <h2>Bejelentkezés</h2>
 
-<form method="post">
-    <label>Felhasználónév:</label>
-    <input type="text" name="username" required>
+    <?php if ($error): ?>
+      <p style="color: red; font-weight: bold;"><?= htmlspecialchars($error) ?></p>
+    <?php endif; ?>
 
-    <label>Jelszó:</label>
-    <input type="password" name="password" required>
+    <form method="post" class="contact-form" style="margin-top: 20px;">
+      <div class="form-group">
+        <label for="username">Felhasználónév</label>
+        <input type="text" id="username" name="username" placeholder="Add meg a felhasználóneved" required>
+      </div>
 
-    <button type="submit">Belépés</button>
-</form>
+      <div class="form-group">
+        <label for="password">Jelszó</label>
+        <input type="password" id="password" name="password" placeholder="Add meg a jelszavad" required>
+      </div>
 
-<p>Még nincs fiókod? <a href="register.php">Regisztrálj itt</a>.</p>
+      <button type="submit" class="btn">Belépés</button>
+    </form>
+
+    <p style="margin-top: 15px; text-align: center;">
+      Még nincs fiókod?
+      <a href="register.php" style="color: #ff6a3d; font-weight: 600;">Regisztrálj itt.</a>
+    </p>
+  </div>
+</section>
+
+</body>
+</html>

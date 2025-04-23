@@ -1,5 +1,5 @@
 <section class="section" id="contact">
-  <div class="container" data-aos="fade-up">
+  <div class="container" data-aos="fade-up" style="max-width: 600px; margin: 0 auto;">
     <h2>Kapcsolat</h2>
     <p>Írj nekünk, ha kérdésed van, vagy szeretnél ajánlatot kérni flottakezelésre vagy autóbérlésre!</p>
 
@@ -23,5 +23,6 @@
     </form>
   </div>
 </section>
+
 
 
