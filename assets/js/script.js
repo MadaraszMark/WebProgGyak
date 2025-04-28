@@ -64,3 +64,23 @@ document.addEventListener("click", e => {
         });
     }
 });
+
+// FORM VALIDÁCIÓ - Kapcsolat űrlap
+function validateContactForm() {
+    var name = document.getElementById('name').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var message = document.getElementById('message').value.trim();
+
+    if (name === '' || email === '' || message === '') {
+        alert('Kérlek, tölts ki minden mezőt!');
+        return false;
+    }
+
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert('Kérlek, adj meg egy érvényes email címet!');
+        return false;
+    }
+
+    return true;
+}

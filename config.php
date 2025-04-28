@@ -3,11 +3,13 @@
 
 // Menü konfiguráció (menüpont => fájlnév)
 $pages = [
-    'home' => 'Főoldal',
-    'cars' => 'Autóink',
-    'gallery' => 'Galéria',
-    'contact' => 'Kapcsolat',
-    'messages' => 'Üzenetek',
+    'home' => 'home',
+    'cars' => 'cars',
+    'gallery' => 'gallery',
+    'contact' => 'contact',
+    'contact-success' => 'contact-success', // EZ KELL!
+    'messages' => 'messages',
+    '404' => '404',
 ];
 
 // Oldal elérési útja (mappa, ahol a sablonoldalak vannak)

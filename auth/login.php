@@ -20,7 +20,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'first_name' => $user['first_name'],
             'username' => $user['username']
         ];
-        header('Location: ../index.php');
+
+        // Itt dönti el, hogy admin vagy sima user
+        if ($user['username'] === 'admin') {
+            header('Location: ../admin/messages.php');
+        } else {
+            header('Location: ../index.php');
+        }
         exit;
     } else {
         $error = "Hibás felhasználónév vagy jelszó!";

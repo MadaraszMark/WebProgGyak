@@ -1,0 +1,48 @@
+body.admin-panel {
+    background-color: #f0f4f8;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .table-container {
+    margin-top: 30px;
+  }
+  
+  table {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+  
+  thead {
+    background-color: #e0e7ef;
+  }
+  
+  thead th {
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  tbody td {
+    padding: 14px;
+    border-top: 1px solid #eee;
+    color: #555;
+  }
+  
+  .btn.small.secondary {
+    background-color: transparent;
+    border: 2px solid #6366f1;
+    color: #6366f1;
+  }
+  
+  .btn.small.secondary:hover {
+    background-color: #6366f1;
+    color: white;
+  }
+  

@@ -292,32 +292,66 @@ tbody tr:hover {
   color: white;
 }
 
+/* Dark mode */
 body.dark-mode {
   background-color: #1e1e1e;
   color: #f1f1f1;
 }
 
+/* Általános elemek */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode label,
+body.dark-mode a {
+  color: #f1f1f1;
+}
+
+/* Kártyák, űrlapok, táblák */
 body.dark-mode .card,
 body.dark-mode .upload-form,
 body.dark-mode .contact-form,
 body.dark-mode .table-container,
 body.dark-mode input,
-body.dark-mode textarea {
+body.dark-mode textarea,
+body.dark-mode table,
+body.dark-mode th,
+body.dark-mode td {
   background-color: #2b2b2b;
-  color: #fff;
+  color: #f1f1f1;
   border-color: #444;
 }
 
-body.dark-mode a {
-  color: #91cfff;
+/* Szekciók */
+body.dark-mode .section {
+  background-color: #1e1e1e;
 }
 
+/* Header és Footer */
+body.dark-mode .main-header {
+  background-color: #2b2b2b;
+  border-bottom: 1px solid #444;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+body.dark-mode footer {
+  background-color: #2b2b2b;
+  color: #aaa;
+}
+
+body.dark-mode .hero {
+  background: linear-gradient(90deg, #2b2b2b, #1e1e1e);
+}
+
+/* Gombok */
 body.dark-mode .btn {
   background-color: #6366f1;
   color: white;
 }
 
 body.dark-mode .btn.secondary {
+  background-color: transparent;
   border: 2px solid #91cfff;
   color: #91cfff;
 }
@@ -325,6 +359,21 @@ body.dark-mode .btn.secondary {
 body.dark-mode .btn.secondary:hover {
   background-color: #91cfff;
   color: #1e1e1e;
+}
+
+/* Navigáció */
+body.dark-mode .nav-menu a {
+  color: #f1f1f1;
+}
+
+body.dark-mode .nav-menu a:hover {
+  color: #91cfff;
+}
+
+/* Video és iframe */
+body.dark-mode video,
+body.dark-mode iframe {
+  background-color: #2b2b2b;
 }
 
 footer {

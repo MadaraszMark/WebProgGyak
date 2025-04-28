@@ -1,7 +1,7 @@
 <section class="section" id="gallery">
   <div class="container" data-aos="fade-up">
     <h2>Galéria</h2>
-    <p>Nézz körül képgalériánkban, ahol a flottánk legszebb pillanatait láthatod!</p>
+    <p>Nézz körül a felhasználók álltal feltöltött képgalériánkban, ahol a flottánk legszebb pillanatait láthatod!</p>
 
     <!-- Galéria rács -->
     <div class="container">
