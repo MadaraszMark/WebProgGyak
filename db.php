@@ -2,17 +2,17 @@
 // db.php
 
 $host = 'localhost';
-$dbname = 'car_fleet_manager';
-$user = 'root';           // vagy a te felhasználód
-$pass = '';               // ha van jelszó, írd ide
+$dbname = 'webproggyak';
+$user = 'webproggyak';
+$pass = 'Webprog123';
 $charset = 'utf8';
 
 $dsn = "mysql:host=$host;dbname=$dbname;charset=$charset";
 
 $options = [
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,        // hibakezelés
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,   // asszociatív tömb
-    PDO::ATTR_EMULATE_PREPARES => false,                // natív prepared statements
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES => false,
 ];
 
 try {
@@ -20,3 +20,4 @@ try {
 } catch (PDOException $e) {
     die("Adatbázis kapcsolódási hiba: " . $e->getMessage());
 }
+?>
