@@ -23,24 +23,36 @@
   <header class="main-header">
     <div class="container">
       <h1 class="site-title">Autókereskedés & Flottakezelő</h1>
-      <nav class="nav-menu">
-  <ul>
-    <?php if (isset($admin_page) && $admin_page): ?>
-      <li><a href="messages.php">Üzenetek</a></li>
-      <li><a href="../auth/logout.php" class="btn small secondary">Kilépés</a></li>
-    <?php else: ?>
-      <li><a href="index.php?page=home">Főoldal</a></li>
-      <li><a href="index.php?page=cars">Autóink</a></li>
-      <li><a href="index.php?page=gallery">Galéria</a></li>
-      <li><a href="index.php?page=contact">Kapcsolat</a></li>
-      <?php if (!isset($_SESSION['user'])): ?>
-        <li><a href="auth/login.php" class="btn small">Belépés</a></li>
-      <?php else: ?>
-        <li><a href="auth/logout.php" class="btn small secondary">Kilépés</a></li>
+
+      <?php if (isset($_SESSION['user'])): ?>
+        <div class="logged-in-user" style="margin-bottom: 7px; font-size: 1rem; font-weight: 600;">
+          Bejelentkezett: 
+          <?= htmlspecialchars($_SESSION['user']['last_name']) . ' ' . 
+              htmlspecialchars($_SESSION['user']['first_name']) . ' (' . 
+              htmlspecialchars($_SESSION['user']['username']) . ')' ?>
+        </div>
       <?php endif; ?>
-    <?php endif; ?>
-  </ul>
-</nav>
+
+      <nav class="nav-menu">
+        <ul>
+          <?php if (isset($admin_page) && $admin_page): ?>
+            <li><a href="messages.php">Üzenetek</a></li>
+            <li><a href="../auth/logout.php" class="btn small secondary">Kilépés</a></li>
+          <?php else: ?>
+            <li><a href="index.php?page=home">Főoldal</a></li>
+            <li><a href="index.php?page=cars">Autóink</a></li>
+            <li><a href="index.php?page=gallery">Galéria</a></li>
+            <li><a href="index.php?page=contact">Kapcsolat</a></li>
+
+            <?php if (isset($_SESSION['user'])): ?>
+              <li><a href="index.php?page=messages">Üzenetek</a></li>
+              <li><a href="auth/logout.php" class="btn small secondary">Kilépés</a></li>
+            <?php else: ?>
+              <li><a href="auth/login.php" class="btn small">Belépés</a></li>
+            <?php endif; ?>
+          <?php endif; ?>
+        </ul>
+      </nav>
     </div>
   </header>
 
