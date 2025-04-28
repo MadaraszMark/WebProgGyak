@@ -1,5 +1,4 @@
 <?php
-// 📄 Fájl: upload.php (gyökérkönyvtárban!)
 require_once 'db.php';
 require_once 'config.php';
 

@@ -78,7 +78,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <button type="submit" class="btn">Regisztráció</button>
     </form>
 
-    <!-- Új navigációs gombok -->
     <div style="margin-top: 20px; display: flex; justify-content: space-between;">
       <a href="../index.php" class="btn small">Főoldal</a>
       <a href="login.php" class="btn small secondary">Bejelentkezés</a>

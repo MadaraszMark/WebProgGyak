@@ -1,4 +1,3 @@
-<!-- templates/header.php -->
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -6,10 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Autókereskedés & Flottakezelő</title>
 
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <!-- Saját CSS -->
 <?php if (isset($admin_page) && $admin_page): ?>
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/admin.css">
@@ -17,11 +14,9 @@
   <link rel="stylesheet" href="assets/css/style.css">
 <?php endif; ?>
 
-  <!-- AOS animáció -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <!-- Saját JS -->
   <script defer src="assets/js/script.js"></script>
 </head>
 <body>

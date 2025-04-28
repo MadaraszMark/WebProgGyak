@@ -1,4 +1,3 @@
-/* Google Font */
 body {
   font-family: 'Inter', sans-serif;
   background-color: #f5f7fa;
@@ -19,7 +18,6 @@ p {
   line-height: 1.5;
 }
 
-/* HERO SZEKCIÓ */
 .hero {
   display: flex;
   flex-wrap: wrap;
@@ -87,7 +85,7 @@ p {
 }
 
 .section {
-  padding: 50px 8%; /* 80px helyett 50px */
+  padding: 50px 8%;
   background-color: #fff;
 }
 
@@ -190,8 +188,6 @@ iframe {
   background-color: #e65727;
 }
 
-
-/* ÜZENETEK TÁBLÁZAT */
 .table-container {
   overflow-x: auto;
   margin-top: 30px;
@@ -298,7 +294,6 @@ body.dark-mode {
   color: #f1f1f1;
 }
 
-/* Általános elemek */
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3,
@@ -308,7 +303,6 @@ body.dark-mode a {
   color: #f1f1f1;
 }
 
-/* Kártyák, űrlapok, táblák */
 body.dark-mode .card,
 body.dark-mode .upload-form,
 body.dark-mode .contact-form,
@@ -323,12 +317,10 @@ body.dark-mode td {
   border-color: #444;
 }
 
-/* Szekciók */
 body.dark-mode .section {
   background-color: #1e1e1e;
 }
 
-/* Header és Footer */
 body.dark-mode .main-header {
   background-color: #2b2b2b;
   border-bottom: 1px solid #444;
@@ -344,7 +336,6 @@ body.dark-mode .hero {
   background: linear-gradient(90deg, #2b2b2b, #1e1e1e);
 }
 
-/* Gombok */
 body.dark-mode .btn {
   background-color: #6366f1;
   color: white;
@@ -361,7 +352,6 @@ body.dark-mode .btn.secondary:hover {
   color: #1e1e1e;
 }
 
-/* Navigáció */
 body.dark-mode .nav-menu a {
   color: #f1f1f1;
 }
@@ -370,7 +360,6 @@ body.dark-mode .nav-menu a:hover {
   color: #91cfff;
 }
 
-/* Video és iframe */
 body.dark-mode video,
 body.dark-mode iframe {
   background-color: #2b2b2b;
@@ -400,7 +389,7 @@ footer hr {
 
 .gallery-item img {
   width: 100%;
-  height: 860px; /* vagy 240px, ízlés szerint */
+  height: 860px;
   object-fit: cover;
   object-position: center;
   border-radius: 12px;

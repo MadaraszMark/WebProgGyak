@@ -13,7 +13,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user = $stmt->fetch();
 
     if ($user && password_verify($password, $user['password'])) {
-        // Sikeres login
         $_SESSION['user'] = [
             'id' => $user['id'],
             'last_name' => $user['last_name'],
@@ -21,7 +20,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'username' => $user['username']
         ];
 
-        // Itt dönti el, hogy admin vagy sima user
         if ($user['username'] === 'admin') {
             header('Location: ../admin/messages.php');
         } else {

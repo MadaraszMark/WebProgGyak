@@ -3,7 +3,6 @@
     <h2>Galéria</h2>
     <p>Nézz körül a felhasználók álltal feltöltött képgalériánkban, ahol a flottánk legszebb pillanatait láthatod!</p>
 
-    <!-- Galéria rács -->
     <div class="container">
       <div class="gallery-grid" data-aos="zoom-in" data-aos-delay="100">
         <?php
@@ -24,7 +23,6 @@
       </div>
     </div>
 
-    <!-- Kép feltöltő form -->
     <?php if (isset($_SESSION['user'])): ?>
       <div class="upload-form" data-aos="fade-up" data-aos-delay="200">
         <h3>Kép feltöltése</h3>

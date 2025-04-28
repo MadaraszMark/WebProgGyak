@@ -3,13 +3,11 @@ $admin_page = true;
 require_once '../config.php';
 require_once '../db.php';
 
-// Ellenőrizzük, hogy admin-e
 if (!isset($_SESSION['user']) || $_SESSION['user']['username'] !== 'admin') {
     header('Location: ../index.php');
     exit;
 }
 
-// Lekérjük az üzeneteket
 $stmt = $pdo->query("SELECT * FROM messages ORDER BY created_at DESC");
 $messages = $stmt->fetchAll();
 ?>

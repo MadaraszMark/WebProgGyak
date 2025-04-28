@@ -15,7 +15,7 @@ CREATE TABLE cars (
     brand VARCHAR(100) NOT NULL,
     model VARCHAR(100) NOT NULL,
     year INT,
-    image VARCHAR(255), -- elérési út az uploads/ mappából
+    image VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 

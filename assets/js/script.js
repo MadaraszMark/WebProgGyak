@@ -1,4 +1,3 @@
-// DARK MODE TOGGLE
 const pageBody = document.body;
 const toggle = document.createElement('button');
 toggle.innerText = "🌙";
@@ -22,7 +21,6 @@ toggle.onclick = () => {
 
 document.body.appendChild(toggle);
 
-// SMOOTH SCROLL
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
         e.preventDefault();
@@ -32,7 +30,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// LIGHTBOX a galériához
 document.addEventListener("click", e => {
     if (e.target.tagName === "IMG" && e.target.closest(".gallery-grid")) {
         const src = e.target.getAttribute("src");
@@ -65,7 +62,6 @@ document.addEventListener("click", e => {
     }
 });
 
-// FORM VALIDÁCIÓ - Kapcsolat űrlap
 function validateContactForm() {
     var name = document.getElementById('name').value.trim();
     var email = document.getElementById('email').value.trim();
