@@ -10,7 +10,8 @@ $pages = [
     'messages' => 'Üzenetek',
     'register' => 'Regisztráció',
     'login' => 'Belépés',
-    'logout' => 'Kilépés'
+    'logout' => 'Kilépés',
+    'contact-success' => '',
 ];
 
 // Egyéb oldalak
