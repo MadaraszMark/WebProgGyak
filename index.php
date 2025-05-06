@@ -7,7 +7,6 @@ require_once 'config.php';
 
 $page = isset($_GET['page']) ? $_GET['page'] : $DEFAULT_PAGE;
 
-// Speciális kilépés kezelés
 if ($page === 'logout') {
     session_destroy();
     header("Location: index.php?page=home");

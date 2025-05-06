@@ -42,7 +42,7 @@
               // Admin ne lásson frontend menüpontokat
               if (isset($_SESSION['user']) && $_SESSION['user']['username'] === 'admin' && $slug !== 'logout') continue;
 
-              // "Üzenetek" csak bejelentkezett, nem-admin felhasználónak
+              // Üzenetek csak bejelentkezett, nem-admin felhasználónak
               if ($slug === 'messages' && (!isset($_SESSION['user']) || $_SESSION['user']['username'] === 'admin')) continue;
 
               // Belépés/Regisztráció csak kijelentkezve
@@ -51,7 +51,6 @@
               // Kilépés csak bejelentkezve
               if ($slug === 'logout' && !isset($_SESSION['user'])) continue;
 
-              // Gomb dizájn
               $class = '';
               if ($slug === 'login') $class = 'btn small';
               if ($slug === 'logout') $class = 'btn small secondary';

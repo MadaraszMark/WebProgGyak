@@ -13,7 +13,6 @@ $pages = [
     'logout' => 'Kilépés'
 ];
 
-
 // Egyéb oldalak
 $PAGE_DIR = 'templates/pages/';
 $DEFAULT_PAGE = 'home';
