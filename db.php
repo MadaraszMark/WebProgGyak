@@ -2,9 +2,9 @@
 // db.php
 
 $host = 'localhost';
-$dbname = 'car_fleet_manager';
-$user = 'root';
-$pass = '';
+$dbname = 'webproggyak';
+$user = 'webproggyak';
+$pass = 'Webprog123';
 $charset = 'utf8';
 
 $dsn = "mysql:host=$host;dbname=$dbname;charset=$charset";
