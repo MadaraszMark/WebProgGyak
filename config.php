@@ -1,18 +1,16 @@
 <?php
 // config.php
 
-// Menü: kulcs = fájlnév, érték = megjelenített szöveg
+// Menü
 $pages = [
     'home' => 'Főoldal',
     'cars' => 'Autóink',
     'gallery' => 'Galéria',
     'contact' => 'Kapcsolat',
-    'contact-success' => 'Üzenet elküldve',
     'messages' => 'Üzenetek',
-    'login' => 'Belépés',
     'register' => 'Regisztráció',
-    'logout' => 'Kilépés',
-    '404' => 'Hiba'
+    'login' => 'Belépés',
+    'logout' => 'Kilépés'
 ];
 
 

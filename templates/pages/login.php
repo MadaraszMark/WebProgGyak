@@ -1,10 +1,9 @@
 <?php
-require_once '../db.php';
-require_once '../config.php';
-
 $error = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    require_once 'db.php';
+
     $username = trim($_POST['username']);
     $password = $_POST['password'];
 
@@ -21,9 +20,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ];
 
         if ($user['username'] === 'admin') {
-            header('Location: ../admin/messages.php');
+            header('Location: admin/messages.php');
         } else {
-            header('Location: ../index.php');
+            header('Location: index.php?page=home');
         }
         exit;
     } else {
@@ -31,16 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-
-<!DOCTYPE html>
-<html lang="hu">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bejelentkezés</title>
-  <link rel="stylesheet" href="../assets/css/style.css">
-</head>
-<body>
 
 <section class="section" id="login">
   <div class="container" style="max-width: 400px; margin: 0 auto;">
@@ -66,10 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <p style="margin-top: 15px; text-align: center;">
       Még nincs fiókod?
-      <a href="register.php" style="color: #ff6a3d; font-weight: 600;">Regisztrálj itt.</a>
+      <a href="index.php?page=register" style="color: #ff6a3d; font-weight: 600;">Regisztrálj itt.</a>
     </p>
   </div>
 </section>
-
-</body>
-</html>

@@ -1,0 +1,10 @@
+<?php
+require_once 'config.php';
+
+// Munkamenet vége
+session_destroy();
+
+// Átirányítás a főoldalra
+header("Location: index.php?page=home");
+exit;
+

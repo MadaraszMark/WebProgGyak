@@ -1,11 +1,10 @@
 <?php
-require_once '../db.php';
-require_once '../config.php';
-
 $error = '';
 $success = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    require_once 'db.php';
+
     $lastname = trim($_POST['last_name']);
     $firstname = trim($_POST['first_name']);
     $username = trim($_POST['username']);
@@ -22,26 +21,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $error = "Ez a felhasználónév már foglalt!";
         } else {
             $passwordHash = password_hash($password, PASSWORD_DEFAULT);
-
             $stmt = $pdo->prepare("INSERT INTO users (last_name, first_name, username, password) VALUES (?, ?, ?, ?)");
             $stmt->execute([$lastname, $firstname, $username, $passwordHash]);
 
-            $success = "Sikeres regisztráció! <a href='login.php'>Jelentkezz be itt</a>.";
+            $success = "✅ Sikeres regisztráció! <a href='index.php?page=login'>Jelentkezz be itt</a>.";
         }
     }
 }
 ?>
-
-<!DOCTYPE html>
-<html lang="hu">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Regisztráció</title>
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <script defer src="../assets/js/register.js"></script>
-</head>
-<body>
 
 <section class="section" id="register">
   <div class="container" style="max-width: 400px; margin: 0 auto;">
@@ -79,12 +66,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </form>
 
     <div style="margin-top: 20px; display: flex; justify-content: space-between;">
-      <a href="../index.php" class="btn small">Főoldal</a>
-      <a href="login.php" class="btn small secondary">Bejelentkezés</a>
+      <a href="index.php?page=home" class="btn small">Főoldal</a>
+      <a href="index.php?page=login" class="btn small secondary">Bejelentkezés</a>
     </div>
-
   </div>
 </section>
-
-</body>
-</html>

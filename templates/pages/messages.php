@@ -6,14 +6,30 @@ if (!isset($_SESSION['user'])) {
     exit;
 }
 
-$stmt = $pdo->query("
-    SELECT messages.*, 
-           users.first_name, 
-           users.last_name 
-    FROM messages
-    LEFT JOIN users ON messages.user_id = users.id
-    ORDER BY created_at DESC
-");
+$isAdmin = $_SESSION['user']['username'] === 'admin';
+
+if ($isAdmin) {
+    $stmt = $pdo->query("
+        SELECT messages.*, 
+               users.first_name, 
+               users.last_name 
+        FROM messages
+        LEFT JOIN users ON messages.user_id = users.id
+        ORDER BY created_at DESC
+    ");
+} else {
+    $stmt = $pdo->prepare("
+        SELECT messages.*, 
+               users.first_name, 
+               users.last_name 
+        FROM messages
+        LEFT JOIN users ON messages.user_id = users.id
+        WHERE messages.user_id = ?
+        ORDER BY created_at DESC
+    ");
+    $stmt->execute([$_SESSION['user']['id']]);
+}
+
 $messages = $stmt->fetchAll();
 ?>
 
@@ -53,8 +69,9 @@ $messages = $stmt->fetchAll();
         </table>
       </div>
     <?php else: ?>
-      <p>Még nincs üzenet az adatbázisban.</p>
+      <p>Még nincs megjeleníthető üzenet.</p>
     <?php endif; ?>
   </div>
 </section>
+
 
