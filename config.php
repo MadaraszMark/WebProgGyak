@@ -1,22 +1,24 @@
 <?php
 // config.php
 
-// Menü konfiguráció
+// Menü: kulcs = fájlnév, érték = megjelenített szöveg
 $pages = [
-    'home' => 'home',
-    'cars' => 'cars',
-    'gallery' => 'gallery',
-    'contact' => 'contact',
-    'contact-success' => 'contact-success',
-    'messages' => 'messages',
-    '404' => '404',
+    'home' => 'Főoldal',
+    'cars' => 'Autóink',
+    'gallery' => 'Galéria',
+    'contact' => 'Kapcsolat',
+    'contact-success' => 'Üzenet elküldve',
+    'messages' => 'Üzenetek',
+    'login' => 'Belépés',
+    'register' => 'Regisztráció',
+    'logout' => 'Kilépés',
+    '404' => 'Hiba'
 ];
 
-// Oldal elérési útja
+
+// Egyéb oldalak
 $PAGE_DIR = 'templates/pages/';
-
 $DEFAULT_PAGE = 'home';
-
 $ERROR_PAGE = '404';
 
 $SITE_TITLE = "Autókereskedés & Flottakezelő";
@@ -26,3 +28,4 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 ?>
+
